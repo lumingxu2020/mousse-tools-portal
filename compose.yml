@@ -1,0 +1,28 @@
+name: mousse-tools-portal
+services:
+  portal:
+    build: .
+    image: mousse-tools-portal:local
+    container_name: mousse-tools-portal
+    restart: unless-stopped
+    init: true
+    ports:
+      - "3090:3090"
+    volumes:
+      - ./data:/data:rw
+    read_only: true
+    tmpfs:
+      - /tmp:size=8m,noexec,nosuid
+    cap_drop: [ALL]
+    security_opt: ["no-new-privileges:true"]
+    mem_limit: 128m
+    pids_limit: 64
+    healthcheck:
+      test: ["CMD", "node", "-e", "fetch('http://127.0.0.1:3090/healthz').then(r=>process.exit(r.ok?0:1)).catch(()=>process.exit(1))"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+      start_period: 10s
+    logging:
+      driver: json-file
+      options: {max-size: "5m", max-file: "3"}

@@ -1,0 +1,8 @@
+{"title":"慕斯的小工具","revision":1,"apps":[
+{"id":"word-match","name":"中英消消乐","description":"点一点、配一对，把课本单词变成闯关游戏。","category":"学习","icon":"🔤","url":"http://192.168.50.251:3093/","externalUrl":"","visible":true},
+{"id":"violin","name":"小提琴节拍器","description":"跟着节奏练琴，让每一次练习更从容。","category":"学习","icon":"🎻","url":"http://192.168.50.251:8780/","externalUrl":"","visible":true},
+{"id":"lexiang","name":"乐享答题通报","description":"整理答题数据，生成工作通报。","category":"工作","icon":"📊","url":"http://192.168.50.251:8787/","externalUrl":"","visible":true},
+{"id":"poker144","name":"144 扑克","description":"和家人一起开局，享受一场轻松的牌局。","category":"生活","icon":"🃏","url":"http://192.168.50.251:3144/","externalUrl":"","visible":true},
+{"id":"teslamate","name":"TeslaMate","description":"查看车辆记录与行程信息。","category":"生活","icon":"🚗","url":"http://192.168.50.251:4000/","externalUrl":"","visible":true},
+{"id":"grafana","name":"车辆数据看板","description":"在 Grafana 中浏览能耗、充电与行程图表。","category":"生活","icon":"📈","url":"http://192.168.50.251:3000/","externalUrl":"","visible":true}
+]}
